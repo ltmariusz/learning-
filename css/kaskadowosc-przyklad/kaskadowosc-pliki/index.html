@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+        Inicjalizowane są te właściwości, które nie są określane w wyniku pozostałych punktów, czyli nie są zadeklarowana w żaden sposób.
+
+        1. Wartość inicjalizująca (w wyniku przypisania lub oddziedziczenia dla wartości dziedziczących). Np. wszystkie elementy mają początkowo margin dla każdego kierunku ustawiony na 0. Font-weigt na normal, ale dziedziczą po html. Każdy element inicjalizuje wiele właściwości. 
+
+
+        Dziedziczone są te właściwości, które nie mają precyzyjnych reguł/
+        2. Dziedziczenie właściwości z reguł w stylach przeglądarki.
+        3. Dziedziczenie właściwości z reguł własnych stylów.
+
+        Reguły precyzyjne i ważność.
+        4. Przypisanie stylów precyzyjnych ze stylów przeglądarki. Np. body ma margin 8px. Marginesów do h1-h6 do p. Pogrubienia do strong i b.
+        5. Przypisanie właściwości z reguł precyzyjnych z naszych stylów. Decyzja o ważności.
+
+        Ważne jest również to w jaki sposób została dodana dana reguły (liniowo lub zewnętrzny plik lub w head). Możliwość użycia instrukcji !important
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kaskadowość</title>
+
+    <style>
+        p {
+            background-color: brown;
+            color: white !important;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="big" id="header">Nagłówek w znaczniku h1<span>a w nim span</span></h1>
+    <p>Jaki margines ma nasze p?
+        <strong>Czy ten strong jest pogrubiony</strong>
+    </p>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, sapiente? Est ducimus quidem non perferendis! Magni
+        sed omnis laudantium vel mollitia, porro illum dolorum optio, dolorem animi tempora reiciendis ullam atque tenetur
+        eligendi odio earum corporis rerum quasi molestiae nemo pariatur. Reprehenderit nobis ratione aperiam. Amet tenetur
+        neque unde! Commodi?</section>
+</body>
+
+</html>
