@@ -1,0 +1,66 @@
+<!-- 
+Zrób szachownicę wykorzystując position absolute dla pól szachownicy.
+Określ szerokość szachownicy na 50% i wysokosć na 50vw; Sprawdź czy są to te same wielkości i uzasadnij dlaczego :)
+Pola szachownicy mają być wypozycjonowane względem div.board
+
+Wycentruj szachownicę w poziomie i pionie wykorzystując calc() i position: absolute.
+Tekst ma być pod szachownicą. Wykorzystaj do tego właściwości position relative dla h1.
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Szachownica Position Absolute</title>
+    <style>
+      .board {
+        width: 50%;
+        height: 50vw;
+        position: absolute;
+        border: solid 10px black;
+        left: calc(50% - 25%);
+        top: calc(50% - 25vw);
+      }
+      span {
+        box-sizing: border-box;
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background-color: white;
+      }
+      span:nth-child(2) {
+        right: 0;
+        background-color: red;
+      }
+      span:nth-child(3) {
+        bottom: 0;
+        background-color: red;
+      }
+      span:nth-child(4) {
+        bottom: 0;
+        right: 0;
+      }
+      h1 {
+        text-align: center;
+        position: relative;
+        top: 90vh;
+        line-height: 10vh;
+        text-transform: uppercase;
+        font-family: arial;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="board">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1>Szachownica "Position Absolute"</h1>
+  </body>
+</html>
