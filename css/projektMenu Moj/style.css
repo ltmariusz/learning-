@@ -11,10 +11,10 @@
   /* height: 30vh; */
 }
 
-nav {
+nav.desktop {
   padding-left: 24px;
 }
-nav > ul {
+nav.desktop > ul {
   list-style-type: none;
 }
 
@@ -24,7 +24,7 @@ ul {
   flex-direction: column;
   height: 100%;
   justify-content: space-around;
-  width: 20vw;
+  width: calc(20vw + 15px);
   padding-left: 12px;
   margin: 0;
 }
@@ -47,14 +47,14 @@ li {
 }
 
 .piano {
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   margin: auto;
 }
 
 section {
-  width: 100vw;
+  width: 100%;
   font-size: 50px;
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@ section {
   margin-top: 24px;
 }
 
-div > i {
+nav.desktop div > i {
   padding-right: 12px;
 }
 
@@ -74,7 +74,7 @@ a {
   transition: 0.2s;
   flex-grow: 1;
 }
-i {
+nav.desktop i {
   width: 50px;
   border-right: solid black 2px;
 }
@@ -83,7 +83,7 @@ i {
   align-items: center;
 }
 
-li:hover a {
+nav.desktop li:hover a {
   color: blanchedalmond;
   padding-left: 54px;
 }
@@ -98,17 +98,29 @@ li:hover {
   .mobile {
     display: block;
   }
+
   nav {
-    height: 100vh;
-    width: 70px;
-    background-color: #00065a;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    background-color: #000000;
+    text-align: center;
   }
+
   i {
+    display: block;
     border: none;
     color: white;
+    width: 100%;
+    padding: 0;
+    transition: 0.3s;
   }
   li {
     padding: 15px 0;
+  }
+  i:hover {
+    color: bisque;
   }
   ul {
     display: flex;
@@ -118,5 +130,11 @@ li:hover {
     width: 100%;
     padding-left: 0;
     margin: 0;
+  }
+  a {
+    padding: 0;
+  }
+  .piano {
+    width: 100%;
   }
 }
