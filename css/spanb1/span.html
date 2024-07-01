@@ -85,11 +85,25 @@
       .b3n:hover {
         color: white;
       }
+
+      .b4n {
+        border: 1px solid;
+      }
+      .b4n::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: 10px solid black;
+        border-top: 17px solid transparent;
+        border-bottom: 17px solid transparent;
+      }
     </style>
   </head>
   <body>
     <button class="b1n">PRZYCISK</button>
     <button class="b2n">PRZYCISK</button>
     <button class="b3n">PRZYCISK</button>
+    <button class="b4n">PRZYCISK</button>
   </body>
 </html>
