@@ -9,16 +9,30 @@
         text-align: center;
       }
       button {
+        position: relative;
         width: 120px;
         height: 45px;
         margin-left: 24px;
         margin-right: 24px;
         background-color: transparent;
-        border: none;
         transition: 1s;
+        border: none;
+        overflow: hidden;
+        cursor: pointer;
       }
-      .b1n:hover {
-        border-bottom: solid 5px;
+      .b1n::after {
+        content: "";
+        position: absolute;
+        background-color: red;
+        width: 100%;
+        height: 5px;
+        left: -100%;
+        bottom: 0;
+      }
+
+      .b1n:hover::after {
+        left: 0;
+        transition: 0.5s;
       }
     </style>
   </head>
