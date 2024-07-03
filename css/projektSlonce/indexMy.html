@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin:0
+        }
+        #sky{
+            background-color: lightblue;
+            width: 100vw;
+            height: 70vh;
+        }
+        #ground{
+            height: 30vh;
+            width: 100vw;
+            background-color: green;
+        }
+        #sun{
+            position: absolute;
+            left: 60px;
+            top: calc(100% - 60px);
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
     <div id="sun"></div>
-    <div id="ground"> </div>
     <div id="sky"></div>
+    <div id="ground"> </div>
 </body>
 </html>
