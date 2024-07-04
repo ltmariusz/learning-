@@ -6,32 +6,51 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 30px;
+        width: 30px;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: disco 1s infinite both;
+      }
+      /* last */
+      div:nth-last-of-type(1) {
+        /* width: 100%; */
+        animation: disco 3s infinite;
+      }
+      @keyframes disco {
+        0% {
+          top: 0%;
+          left: 0%;
+        }
+        25% {
+          top: calc(100% - 30px);
+          left: 0%;
+        }
+        50% {
+          top: calc(100% - 30px);
+          left: calc(100% - 30px);
+        }
+        100% {
+          top: 0%;
+          left: calc(100% - 30px);
+        }
+      }
+    </style>
+  </head>
 
-<head>
- <meta charset="UTF-8">
- <title>Document</title>
- <style>
-  div {
-   height: 30px;
-   width: 30px;
-   background-color: black;
-   position: absolute;
-   top: 0;
-   left: 0;
-  }
-
-  @keyframes disco {}
- </style>
-</head>
-
-<body>
- <div></div>
- <div></div>
- <div></div>
- <div></div>
- <div></div>
- <div></div>
-
-</body>
-
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
 </html>
