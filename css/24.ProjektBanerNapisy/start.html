@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Slider</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+      }
+
+      h1 {
+        position: absolute;
+        font-size: 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-family: "open sans", sans-serif;
+        color: white;
+        padding: 10px 40px;
+      }
+
+      h1:nth-of-type(1) {
+        top: 30%;
+        right: 20%;
+        animation: first_picture 12s infinite;
+      }
+
+      h1:nth-of-type(2) {
+        bottom: 10%;
+        left: 10%;
+        animation: second_picture 12s infinite;
+      }
+
+      h1:nth-of-type(3) {
+        top: 10%;
+        left: 35%;
+        animation: third_picture 12s infinite;
+      }
+      img:nth-of-type(1) {
+        animation: first_picture 12s infinite;
+      }
+
+      img:nth-of-type(2) {
+        animation: second_picture 12s infinite;
+      }
+
+      img:nth-of-type(3) {
+        animation: third_picture 12s infinite;
+      }
+
+      @keyframes first_picture {
+        0% {
+          opacity: 1;
+        }
+        29% {
+          opacity: 1;
+        }
+        33% {
+          opacity: 0;
+        }
+        95% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes second_picture {
+        0% {
+          opacity: 0;
+        }
+        29% {
+          opacity: 0;
+        }
+        33% {
+          opacity: 1;
+        }
+        62% {
+          opacity: 1;
+        }
+        66% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes third_picture {
+        0% {
+          opacity: 0;
+        }
+        62% {
+          opacity: 0;
+        }
+        66% {
+          opacity: 1;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="pic1.jpg" alt="" />
+      <img src="pic2.jpg" alt="" />
+      <img src="pic3.jpg" alt="" />
+      <h1>Japonia</h1>
+      <h1>Polska</h1>
+      <h1>Kanada</h1>
+    </header>
+  </body>
+</html>
