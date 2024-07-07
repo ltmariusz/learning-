@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/c9ebcf1db5.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      div {
+        position: fixed;
+        left: calc(100% - 170px);
+        top: calc(100% - 170px);
+        width: 130px;
+        height: 130px;
+        border: solid 10px darkcyan;
+        color: darkcyan;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 170px;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      div i {
+        /* transform-origin: -50% 0; */
+        /* transform-origin: -50%;
+        transform: translate(-50%, -50%) rotate(25deg); */
+        font-size: 80px;
+        animation: alternate bell-move 0.5s linear infinite;
+        transform-origin: 50% 0;
+        transition: 0.2s;
+      }
+      div:hover {
+        background-color: darkcyan;
+      }
+
+      div:hover i {
+        animation-play-state: paused;
+        color: white;
+      }
+
+      @keyframes bell-move {
+        0% {
+          transform: rotate(20deg);
+        }
+        100% {
+          transform: rotate(-20deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <i class="fa-solid fa-bell"></i>
+    </div>
+  </body>
+</html>
