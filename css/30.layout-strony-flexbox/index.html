@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 10vh;
+            background-color: rgb(37, 37, 37);
+            color: white;
+            font-size: 40px;
+
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15vh;
+            background-color: lightpink;
+            font-size: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        section {
+            display: flex;
+            flex-basis: 70vh;
+            flex-grow: 1;
+            max-width: 1200px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        main {
+            background-color: grey;
+            flex-basis: 80%;
+
+        }
+
+        aside {
+            background-color: lightgrey;
+            flex-basis: 20%;
+        }
+
+        footer {
+            background-color: rgb(37, 37, 37);
+            flex-basis: 10%;
+            width: 100%;
+            max-width: 1200px;
+            color: white;
+        }
+
+        
+        /* jeżeli szerokość ma mniej niż 640px  */
+        @media (max-width: 640px) {
+
+            /* footer{
+                background-color: red;
+            } */
+            section {
+                flex-direction: column;
+            }
+
+            header {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>Nawigacja</nav>
+    <header>Nagłówek</header>
+    <section>
+        <main>Główna część</main>
+        <aside>Kolumna</aside>
+    </section>
+    <footer>Stopka</footer>
+
+</body>
+
+</html>
