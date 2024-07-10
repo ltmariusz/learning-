@@ -1,28 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            display: grid;
-            
-        }
-    </style>
-</head>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: grid;
+        height: 100vh;
+        font-size: 60px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 4fr 80px 8fr 80px;
+        grid-template-areas:
+          "header header header header"
+          "nav nav nav nav" "main main main aside" "footer footer footer footer";
+        color: white;
+      }
+      header {
+        grid-area: header;
+        background-color: blue;
+      }
+      nav {
+        grid-area: nav;
+        background-color: red;
+      }
+      main {
+        grid-area: main;
+        background-color: green;
+      }
+      aside {
+        grid-area: aside;
+        background-color: yellow;
+      }
+      footer {
+        grid-area: footer;
+        background-color: black;
+      }
 
-<body>
+      @media (max-width: 1024px) {
+        body {
+          grid-template-columns: 1fr;
+          grid-template-rows: 4fr 80px 2fr 6fr 80px;
+          grid-template-areas:
+            "header"
+            "nav" "aside" "main" "footer";
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <header>Nagłówek</header>
     <nav>Nawigacja</nav>
     <main>Główna sekcja</main>
     <aside>Pasek boczny</aside>
     <footer>Stopka</footer>
-</body>
-
+  </body>
 </html>
