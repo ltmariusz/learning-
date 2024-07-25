@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: lightcoral;
+  color: white;
+  font-weight: bolder;
+  height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  width: 50rem;
+  font-size: 50px;
+}
+header > div {
+  width: 150px;
+  height: 50px;
+  border: solid black 1.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.plus {
+  background-color: green;
+}
+.arrow {
+  background-color: darkgoldenrod;
+}
+.red {
+  background-color: lightcoral;
+}
+.blue {
+  background-color: blue;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 50px);
+}
+.text {
+  font-size: 50px;
+  text-transform: uppercase;
+}
