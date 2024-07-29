@@ -1,5 +1,5 @@
 $(".burger").on("click", function () {
-  $(".fa-solid, .burger").toggleClass("active");
+  $(".fa-solid, .burger, .wrapper").toggleClass("active");
 });
 const burger = document.querySelector(".burger");
 
