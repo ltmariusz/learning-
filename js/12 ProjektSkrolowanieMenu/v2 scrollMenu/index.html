@@ -79,8 +79,13 @@
     <script src="../jquery-3.3.1.min.js"></script>
     <script>
       $("nav a").on("click", function () {
-        // const goToSection = $(this).attr
-        console.log($(this).attr("class"));
+        const menuId = "#" + $(this).attr("class");
+        $("body, html").animate(
+          {
+            scrollTop: $(menuId).offset().top,
+          },
+          1000
+        );
       });
     </script>
   </body>
